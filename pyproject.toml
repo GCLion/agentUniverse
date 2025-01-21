@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "agentUniverse"
+name = "my_agentUniverse"
 version = "0.0.13"
 description = "agentUniverse is a framework for developing applications powered by multi-agent base on large language model."
 
@@ -21,6 +21,7 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
+agentUniverse = "^0.0.13"
 python = "^3.10"
 requests = "^2.32.0"
 cffi = "^1.15.1"
