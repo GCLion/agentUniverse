@@ -11,7 +11,17 @@ from agentuniverse.base.agentuniverse import AgentUniverse
 from agentuniverse.agent.agent import Agent
 from agentuniverse.agent.agent_manager import AgentManager
 
-AgentUniverse().start(config_path='../../config/config.toml', core_mode=True)
+
+import os
+current_file_path = os.path.abspath(__file__)
+
+# 提取当前 Python 文件所在的目录路径
+current_directory = os.path.dirname(current_file_path)
+
+# 将工作路径切换到当前文件所在的目录
+os.chdir(current_directory)
+
+AgentUniverse().start(config_path='../../config/config.toml') # , core_mode=True
 
 
 def chat(question: str):
